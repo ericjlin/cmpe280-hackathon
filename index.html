@@ -56,7 +56,7 @@
                 <a class="nav-link px-3" href="#">Country</a>
             </div>
         </div> -->
-        
+
         <!-- <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Country
@@ -68,20 +68,21 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </div> -->
-          <div class="navbar-brand px-3" id="connectedornah">
+        <div class="navbar-brand px-3" id="connectedornah">
             Connected
         </div>
-          <div class="nav-item dropdown">
-            <button class="btn btn-secondary dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Country</button>
+        <div class="nav-item dropdown">
+            <button class="btn btn-secondary dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown"
+                aria-expanded="false">Country</button>
             <ul class="dropdown-menu" aria-labelledby="dropdown01">
-              <li><a class="dropdown-item" id="usa">USA</a></li>
-              <li><a class="dropdown-item" id="india">India</a></li>
-              <li><a class="dropdown-item" id="china">China</a></li>
+                <li><a class="dropdown-item" id="usa">USA</a></li>
+                <li><a class="dropdown-item" id="india">India</a></li>
+                <li><a class="dropdown-item" id="china">China</a></li>
             </ul>
         </div>
         <div>
         </div>
-        
+
     </header>
 
     <div class="container-fluid">
@@ -91,14 +92,18 @@
                     <ul class="nav flex-column">
                         <li class="mb-1">
                             <button class="btn btn-toggle align-items-center rounded collapsed"
-                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"
+                                draggable="false">
                                 Macroeconomic(USD)
                             </button>
                             <div class="collapse show" id="home-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                    <li><a href="#" class="link-dark rounded" id="gdp">GDP(USD)</a></li>
-                                    <li><a href="#" class="link-dark rounded" id="fdi_in">FDI Inflow(USD)</a></li>
-                                    <li><a href="#" class="link-dark rounded" id="fdi_out">FDI Outflows(USD)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="gdp" draggable="true"
+                                            ondragstart="drag(event)">GDP(USD)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="fdi_in" draggable="true"
+                                            ondragstart="drag(event)">FDI Inflow(USD)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="fdi_out" draggable="true"
+                                            ondragstart="drag(event)">FDI Outflows(USD)</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -109,10 +114,14 @@
                             </button>
                             <div class="collapse show" id="home-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                    <li><a href="#" class="link-dark rounded" id="agri_gdp">Contribution of Agri(%GDP)</a></li>
-                                    <li><a href="#" class="link-dark rounded" id="credit">Credit</a></li>
-                                    <li><a href="#" class="link-dark rounded" id="fert">Fertilizers</a></li>
-                                    <li><a href="#" class="link-dark rounded" id="fert_prod">Fertilizers PROD</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="agri_gdp" draggable="true"
+                                            ondragstart="drag(event)">Contribution of Agri(%GDP)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="credit" draggable="true"
+                                            ondragstart="drag(event)">Credit</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="fert" draggable="true"
+                                            ondragstart="drag(event)">Fertilizers</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="fert_prod" draggable="true"
+                                            ondragstart="drag(event)">Fertilizers PROD</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -123,9 +132,12 @@
                             </button>
                             <div class="collapse show" id="home-collapse">
                                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                    <li><a href="#" class="link-dark rounded" id="reserves">Reserves</a></li>
-                                    <li><a href="#" class="link-dark rounded" id="gni">GNI</a></li>
-                                    <li><a href="#" class="link-dark rounded" id="total_debt">Total Debt(%)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="reserves" draggable="true"
+                                            ondragstart="drag(event)">Reserves</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="gni" draggable="true"
+                                            ondragstart="drag(event)">GNI</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="total_debt" draggable="true"
+                                            ondragstart="drag(event)">Total Debt(%)</a></li>
                                 </ul>
                             </div>
                         </li>
@@ -144,8 +156,11 @@
                                 Predict
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <img class="theo" id="drag1" src="theo.JPG" draggable="true" ondragstart="drag(event)">
+                        <li class="nav-item" hidden>
+                            <img class="theo" id="theo_drag1" src="theo.JPG" draggable="true" ondragstart="drag(event)">
+                        </li>
+                        <li class="nav-item" hidden>
+                            <img class="logo" id="logo_drag1" src="logo.svg" draggable="true" ondragstart="drag(event)">
                         </li>
                     </ul>
                 </div>
@@ -154,17 +169,7 @@
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group me-2">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                            <span data-feather="calendar"></span>
-                            This week
-                        </button>
-                    </div>
+                    <img class="timeline" src="timeline.png"></img>
                 </div>
                 <div class="dragdroparea">
                     <table class="contactSummary">
@@ -273,6 +278,8 @@
             document.getElementById('dropdown01').innerHTML = "India";
         });
 
+
+
         // drag and drop
         var cloneId;
         var cnt = 0;
@@ -290,14 +297,18 @@
         function drop(ev) {
             ev.preventDefault();
             console.log(cloneId.split("_")[0]);
-            
+
             // var data = ev.dataTransfer.getData("text");
             let newElem;
-            if (cloneId.split("_")[0]=== 'cloned') {
+            if (cloneId.split("_")[0] === 'cloned') {
                 newElem = document.getElementById(cloneId);
             } else {
                 cnt += 1;
-                newElem = document.getElementById(cloneId).cloneNode(false);
+                if (cloneId === 'gdp') {
+                    newElem = document.getElementById('theo_drag1').cloneNode(false)
+                } else {
+                    newElem = document.getElementById(cloneId).cloneNode(false);
+                }
                 newElem.id = "cloned_" + cnt;
                 console.log(newElem);
             }

@@ -223,3 +223,6 @@ table,
           width: 100px;
           height: 100px;
         }
+        .timeline {
+          width: 95%;
+        }
