@@ -214,7 +214,7 @@
         table,
         th,
         td {
-            border: 1px solid black;
+            border: 0px solid black;
             border-collapse: collapse;
             width: 90%;
             background-color: white;
@@ -248,12 +248,11 @@
             border: 1px solid #aaaaaa;
         }
 
-        .row {
+        /* .row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        }
-
+        } */
         .placeholder {
             width: 100px;
             height: 100px;
@@ -261,6 +260,14 @@
 
         .timeline {
             width: 95%;
+        }
+
+        .bar {
+            width: 300px;
+            height: 20px;
+            border-width: 1px;
+            border-style: solid;
+            margin-left: 10px;
         }
 
         .bd-placeholder-img {
@@ -791,7 +798,6 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
 </head>
 
 <body>
@@ -849,6 +855,7 @@
                         <li class="mb-1">
                             <button class="btn btn-toggle align-items-center rounded collapsed"
                                 data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true"
+                                onclick="changeDashboard(event, 'dashboard')"
                                 draggable="false">
                                 Macroeconomic(USD)
                             </button>
@@ -865,7 +872,7 @@
                         </li>
                         <li class="mb-1">
                             <button class="btn btn-toggle align-items-center rounded collapsed"
-                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true" onclick="changeDashboard(event, 'dashboard')">
                                 Agriculture
                             </button>
                             <div class="collapse show" id="home-collapse">
@@ -883,7 +890,7 @@
                         </li>
                         <li class="mb-1">
                             <button class="btn btn-toggle align-items-center rounded collapsed"
-                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true" onclick="changeDashboard(event, 'dashboard')">
                                 Debt Services
                             </button>
                             <div class="collapse show" id="home-collapse">
@@ -919,26 +926,23 @@
 
                     <ul class="nav flex-column mb-2">
                         <li class="nav-item">
-                            <a class="nav-link" id="predict" href="#">
+                            <a class="nav-link" id="import-export" href="#">
                                 <span data-feather="file-text"></span>
-                                Predict
+                                Import-Export
                             </a>
                         </li>
-                        <li class="nav-item" hidden>
-                            <img class="theo" id="theo_drag1" src="theo.JPG" draggable="true" ondragstart="drag(event)">
-                        </li>
-                        <li class="nav-item" hidden>
-                            <img class="logo" id="logo_drag1" src="logo.svg" draggable="true" ondragstart="drag(event)">
+                        <li class="nav-item">
+                            <button class="btn" id="predict1" onclick="changeDashboard(event, 'predict')">
+                                <span data-feather="file-text"></span>
+                                Predict
+                            </button>
                         </li>
                     </ul>
                 </div>
             </nav>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div
-                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <img class="timeline" src="timeline.png"></img>
-                </div>
+                <div id="draggable_playground">
                 <div class="dragdroparea">
                     <table class="contactSummary">
                         <tr>
@@ -1023,10 +1027,96 @@
                             <td class="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
                         </tr>
                     </table>
+                </div>
+               
 
 
                 </div>
-                <!--<div id="MACROECONOMICS_USA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>
+                <div id="predict" style="display:none;margin-top:100px;margin-bottom:2500px;">
+                    
+                    
+                    <div class="container">
+                        <div class="row">
+                            <h4>Model Prediction</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"> 
+                                <p class="label">Projected GDP</p> 
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                            <div class="col-md-2">
+                                FDI-NetOutflows (% of GDP) 
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="36" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                Current Account Balance (% of GDP) 
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                            <div class="col-md-2">
+                                Agricultural Contribution (% of GDP) 
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                Foreign direct investment, net inflows (% of GDP)
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                            <div class="col-md-2">
+                                Manufacturing (% of GDP)
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                Fertilizer consumption(% of fertilizer production)
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                            <div class="col-md-2">
+                                Agriculture, forestry, and fishing, value added (annual % growth)
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                Total reserves (% of total external debt)
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                            <div class="col-md-2">
+                                Total debt service (% of GNI)
+                            </div>
+                            <div class="col-md-3">
+                                <progress class="bar" id="bar" value="24" max="100"></progress>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-2"></div>
+                            <button class="btn btn-primary col-md-2">Call Machine Learning Model</button>
+                        </div>
+                    </div>
+                </div>
+                    <!--<div id="MACROECONOMICS_USA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>
                     <div id="MACROECONOMICS_CHINA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>-->
                 
 
@@ -2524,6 +2614,18 @@
 
             //MACROECONOMICS_CHINA_GDP();
         }
+
+        function changeDashboard(e, page) {
+            e.preventDefault();
+            console.log('clicked', page);
+            if (page === 'predict') {
+                document.getElementById('predict').style.display = "block";
+                document.getElementById('draggable_playground').style.display = "none";
+            } else {
+                document.getElementById('predict').style.display = "none";
+                document.getElementById('draggable_playground').style.display = "block";
+            }
+        }
     </script>
 
 
@@ -2537,7 +2639,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
         integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
         crossorigin="anonymous"></script>
-    <script src="dashboard.js"></script>
 </body>
 
 </html>
