@@ -19,185 +19,199 @@
 
     <style>
         body {
-  font-size: .875rem;
-}
+            font-size: .875rem;
+        }
 
-.feather {
-  width: 16px;
-  height: 16px;
-  vertical-align: text-bottom;
-}
+        .feather {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
 
-/*
+        /*
  * Sidebar
  */
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  /* rtl:raw:
+        .sidebar {
+            position: fixed;
+            top: 0;
+            /* rtl:raw:
   right: 0;
   */
-  bottom: 0;
-  /* rtl:remove */
-  left: 0;
-  z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-}
+            bottom: 0;
+            /* rtl:remove */
+            left: 0;
+            z-index: 100;
+            /* Behind the navbar */
+            padding: 48px 0 0;
+            /* Height of navbar */
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
 
-@media (max-width: 767.98px) {
-  .sidebar {
-    top: 5rem;
-  }
-}
+        @media (max-width: 767.98px) {
+            .sidebar {
+                top: 5rem;
+            }
+        }
 
-.sidebar-sticky {
-  position: relative;
-  top: 0;
-  height: calc(100vh - 48px);
-  padding-top: .5rem;
-  overflow-x: hidden;
-  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-}
+        .sidebar-sticky {
+            position: relative;
+            top: 0;
+            height: calc(100vh - 48px);
+            padding-top: .5rem;
+            overflow-x: hidden;
+            overflow-y: auto;
+            /* Scrollable contents if viewport is shorter than content. */
+        }
 
-.sidebar .nav-link {
-  font-weight: 500;
-  color: #333;
-}
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
 
-.sidebar .nav-link .feather {
-  margin-right: 4px;
-  color: #727272;
-}
+        .sidebar .nav-link .feather {
+            margin-right: 4px;
+            color: #727272;
+        }
 
-.sidebar .nav-link.active {
-  color: #2470dc;
-}
+        .sidebar .nav-link.active {
+            color: #2470dc;
+        }
 
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-  color: inherit;
-}
+        .sidebar .nav-link:hover .feather,
+        .sidebar .nav-link.active .feather {
+            color: inherit;
+        }
 
-.sidebar-heading {
-  font-size: .75rem;
-  text-transform: uppercase;
-}
+        .sidebar-heading {
+            font-size: .75rem;
+            text-transform: uppercase;
+        }
 
-/*
+        /*
  * Navbar
  */
 
-.navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
-}
+        .navbar-brand {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, .25);
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+        }
 
-.navbar .navbar-toggler {
-  top: .25rem;
-  right: 1rem;
-}
+        .navbar .navbar-toggler {
+            top: .25rem;
+            right: 1rem;
+        }
 
-.navbar .form-control {
-  padding: .75rem 1rem;
-  border-width: 0;
-  border-radius: 0;
-}
+        .navbar .form-control {
+            padding: .75rem 1rem;
+            border-width: 0;
+            border-radius: 0;
+        }
 
-.form-control-dark {
-  color: #fff;
-  background-color: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .1);
-}
+        .form-control-dark {
+            color: #fff;
+            background-color: rgba(255, 255, 255, .1);
+            border-color: rgba(255, 255, 255, .1);
+        }
 
-.form-control-dark:focus {
-  border-color: transparent;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
-}
+        .form-control-dark:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+        }
 
 
-/* Sidebar */
-.b-example-divider {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
+        /* Sidebar */
+        .b-example-divider {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
 
-.bi {
-  vertical-align: -.125em;
-  pointer-events: none;
-  fill: currentColor;
-}
+        .bi {
+            vertical-align: -.125em;
+            pointer-events: none;
+            fill: currentColor;
+        }
 
-.dropdown-toggle { outline: 0; }
+        .dropdown-toggle {
+            outline: 0;
+        }
 
-.nav-flush .nav-link {
-  border-radius: 0;
-}
+        .nav-flush .nav-link {
+            border-radius: 0;
+        }
 
-.btn-toggle {
-  display: inline-flex;
-  align-items: center;
-  padding: .25rem .5rem;
-  font-weight: 600;
-  color: rgba(0, 0, 0, .65);
-  background-color: transparent;
-  border: 0;
-}
-.btn-toggle:hover,
-.btn-toggle:focus {
-  color: rgba(0, 0, 0, .85);
-  background-color: #d2f4ea;
-}
+        .btn-toggle {
+            display: inline-flex;
+            align-items: center;
+            padding: .25rem .5rem;
+            font-weight: 600;
+            color: rgba(0, 0, 0, .65);
+            background-color: transparent;
+            border: 0;
+        }
 
-.btn-toggle::before {
-  width: 1.25em;
-  line-height: 0;
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
-  transition: transform .35s ease;
-  transform-origin: .5em 50%;
-}
+        .btn-toggle:hover,
+        .btn-toggle:focus {
+            color: rgba(0, 0, 0, .85);
+            background-color: #d2f4ea;
+        }
 
-.btn-toggle[aria-expanded="true"] {
-  color: rgba(0, 0, 0, .85);
-}
-.btn-toggle[aria-expanded="true"]::before {
-  transform: rotate(90deg);
-}
+        .btn-toggle::before {
+            width: 1.25em;
+            line-height: 0;
+            content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+            transition: transform .35s ease;
+            transform-origin: .5em 50%;
+        }
 
-.btn-toggle-nav a {
-  display: inline-flex;
-  padding: .1875rem .5rem;
-  margin-top: .125rem;
-  margin-left: 1.25rem;
-  text-decoration: none;
-}
-.btn-toggle-nav a:hover,
-.btn-toggle-nav a:focus {
-  background-color: #d2f4ea;
-}
+        .btn-toggle[aria-expanded="true"] {
+            color: rgba(0, 0, 0, .85);
+        }
 
-.scrollarea {
-  overflow-y: auto;
-}
+        .btn-toggle[aria-expanded="true"]::before {
+            transform: rotate(90deg);
+        }
 
-.fw-semibold { font-weight: 600; }
-.lh-tight { line-height: 1.25; }
-.theo {
-  height: 100px;
-  width: 100px;
-  margin-left: 20px;
-}
+        .btn-toggle-nav a {
+            display: inline-flex;
+            padding: .1875rem .5rem;
+            margin-top: .125rem;
+            margin-left: 1.25rem;
+            text-decoration: none;
+        }
 
-table,
+        .btn-toggle-nav a:hover,
+        .btn-toggle-nav a:focus {
+            background-color: #d2f4ea;
+        }
+
+        .scrollarea {
+            overflow-y: auto;
+        }
+
+        .fw-semibold {
+            font-weight: 600;
+        }
+
+        .lh-tight {
+            line-height: 1.25;
+        }
+
+        .theo {
+            height: 100px;
+            width: 100px;
+            margin-left: 20px;
+        }
+
+        table,
         th,
         td {
             border: 1px solid black;
@@ -239,12 +253,14 @@ table,
             flex-direction: row;
             justify-content: space-between;
         }
+
         .placeholder {
-          width: 100px;
-          height: 100px;
+            width: 100px;
+            height: 100px;
         }
+
         .timeline {
-          width: 95%;
+            width: 95%;
         }
 
         .bd-placeholder-img {
@@ -261,75 +277,516 @@ table,
             }
         }
 
-        #iframe_div1_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div1_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div1_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div1_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div1_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div1_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div1_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
 
-        #iframe_div2_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div2_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div2_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div2_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div2_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div2_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div1_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
 
-        #iframe_div3_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div3_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div3_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div3_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div3_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div3_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div1_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
 
-        #iframe_div4_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div4_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div4_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div4_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div4_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div4_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div1_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
 
-        #iframe_div5_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div5_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div5_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div5_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div5_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div5_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div1_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
 
-        #iframe_div6_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div6_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div6_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div6_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div6_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div6_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div1_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
 
-        #iframe_div7_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div7_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div7_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div7_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div7_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div7_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div2_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
 
-        #iframe_div8_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div8_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div8_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div8_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div8_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div8_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div2_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
 
-        #iframe_div9_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div9_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div9_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div9_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div9_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div9_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div2_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
 
-        #iframe_div10_1 {width: 800px;height: 533px;position: relative;}
-        #iframe_div10_1:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div10_2 {width: 800px;height: 533px;position: relative;}
-        #iframe_div10_2:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
-        #iframe_div10_3 {width: 800px;height: 533px;position: relative;}
-        #iframe_div10_3:after {display: block;position: absolute;left: 0;right: 0;top: 0;bottom: 0;}
+        #iframe_div2_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div2_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div2_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div3_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div3_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div3_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div3_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div3_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div3_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div4_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div4_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div4_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div4_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div4_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div4_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div5_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div5_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div5_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div5_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div5_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div5_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div6_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div6_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div6_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div6_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div6_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div6_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div7_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div7_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div7_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div7_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div7_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div7_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div8_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div8_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div8_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div8_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div8_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div8_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div9_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div9_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div9_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div9_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div9_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div9_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div10_1 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div10_1:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div10_2 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div10_2:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #iframe_div10_3 {
+            width: 800px;
+            height: 533px;
+            position: relative;
+        }
+
+        #iframe_div10_3:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #SA_Wheat_Chart {
+            width: 1000px;
+            height: 2000px;
+            position: relative;
+        }
+
+        #SA_Wheat_Chart:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #EG_Wheat_Chart {
+            width: 1000px;
+            height: 2000px;
+            position: relative;
+        }
+
+        #EG_Wheat_Chart:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #SA_Wheat_Pie_Chart {
+            width: 900px;
+            height: 500px;
+            position: relative;
+        }
+
+        #SA_Wheat_Pie_Chart:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+        #EG_Wheat_Pie_Chart {
+            width: 900px;
+            height: 500px;
+            position: relative;
+        }
+
+        #EG_Wheat_Pie_Chart:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
     </style>
 
 
@@ -440,15 +897,27 @@ table,
                                 </ul>
                             </div>
                         </li>
+                        <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded collapsed"
+                                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                                Imports
+                            </button>
+                            <div class="collapse show" id="home-collapse">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                    <li><a href="#" class="link-dark rounded" id="EG_Imports_Sankey" draggable="true"
+                                            ondragstart="drag(event)">Egypt Imports (Sankey Chart)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="EG_Imports_Pie" draggable="true"
+                                            ondragstart="drag(event)">Egypt Imports (Pie Chart)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="SA_Imports_Sankey" draggable="true"
+                                            ondragstart="drag(event)">Saudi Arabia Imports (Sankey Chart)</a></li>
+                                    <li><a href="#" class="link-dark rounded" id="EsA_Imports_Pie" draggable="true"
+                                        ondragstart="drag(event)">Saudi Arabia Imports (Pie Chart)</a></li>
+                                </ul>
+                            </div>
+                        </li>
                     </ul>
 
                     <ul class="nav flex-column mb-2">
-                        <li class="nav-item">
-                            <a class="nav-link" id="import-export" href="#">
-                                <span data-feather="file-text"></span>
-                                Import-Export
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" id="predict" href="#">
                                 <span data-feather="file-text"></span>
@@ -557,152 +1026,1410 @@ table,
 
 
                 </div>
-                    <!--<div id="MACROECONOMICS_USA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>
+                <!--<div id="MACROECONOMICS_USA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>
                     <div id="MACROECONOMICS_CHINA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>-->
+                
 
 
-                    <!--Macroeconomics-->
-                    <!--GDP growth (annual %) - United States-->
-                    <iframe id="iframe_div1_1" src="https://data.worldbank.org/share/widget?contextual=default&end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=US&start=1961&view=chart" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Macroeconomics-->
+                <!--GDP growth (annual %) - United States-->
+                <iframe id="iframe_div1_1"
+                    src="https://data.worldbank.org/share/widget?contextual=default&end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=US&start=1961&view=chart"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--GDP growth (annual %) - India-->
-                    <iframe id="iframe_div1_2" src="https://data.worldbank.org/share/widget?end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=IN&start=1961&view=chart" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--GDP growth (annual %) - India-->
+                <iframe id="iframe_div1_2"
+                    src="https://data.worldbank.org/share/widget?end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=IN&start=1961&view=chart"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--GDP growth (annual %) - China-->
-                    <iframe id="iframe_div1_3" src="https://data.worldbank.org/share/widget?end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=CN&start=1961&view=chart" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-
-
-                    <!--Foreign direct investment, net inflows (% of GDP) - United States-->
-                    <iframe id="iframe_div2_1" src="https://data.worldbank.org/share/widget?indicators=BX.KLT.DINV.WD.GD.ZS&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-                    <!--Foreign direct investment, net inflows (% of GDP) - India-->
-                    <iframe id="iframe_div2_2" src="https://data.worldbank.org/share/widget?indicators=BX.KLT.DINV.WD.GD.ZS&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-                    <!--Foreign direct investment, net inflows (% of GDP) - China-->
-                    <iframe id="iframe_div2_3" src="https://data.worldbank.org/share/widget?indicators=BX.KLT.DINV.WD.GD.ZS&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--GDP growth (annual %) - China-->
+                <iframe id="iframe_div1_3"
+                    src="https://data.worldbank.org/share/widget?end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=CN&start=1961&view=chart"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
 
 
-                    <!--Foreign direct investment, net outflows (% of GDP) - United States-->
-                    <iframe id="iframe_div3_1" src="https://data.worldbank.org/share/widget?indicators=BM.KLT.DINV.WD.GD.ZS&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Foreign direct investment, net inflows (% of GDP) - United States-->
+                <iframe id="iframe_div2_1"
+                    src="https://data.worldbank.org/share/widget?indicators=BX.KLT.DINV.WD.GD.ZS&locations=US"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Foreign direct investment, net outflows (% of GDP) - India-->
-                    <iframe id="iframe_div3_2" src="https://data.worldbank.org/share/widget?indicators=BM.KLT.DINV.WD.GD.ZS&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Foreign direct investment, net inflows (% of GDP) - India-->
+                <iframe id="iframe_div2_2"
+                    src="https://data.worldbank.org/share/widget?indicators=BX.KLT.DINV.WD.GD.ZS&locations=IN"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Foreign direct investment, net outflows (% of GDP) - China-->
-                    <iframe id="iframe_div3_3" src="https://data.worldbank.org/share/widget?indicators=BM.KLT.DINV.WD.GD.ZS&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-
-
-                    <!--Agricultural-->
-                    <!--Agriculture, forestry, and fishing, value added (% of GDP) - United States-->
-                    <iframe id="iframe_div4_1" src="https://data.worldbank.org/share/widget?indicators=NV.AGR.TOTL.ZS&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-                    <!--Agriculture, forestry, and fishing, value added (% of GDP) - India-->
-                    <iframe id="iframe_div4_2" src="https://data.worldbank.org/share/widget?indicators=NV.AGR.TOTL.ZS&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-                    <!--Agriculture, forestry, and fishing, value added (% of GDP) - China-->
-                    <iframe id="iframe_div4_3" src="https://data.worldbank.org/share/widget?indicators=NV.AGR.TOTL.ZS&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Foreign direct investment, net inflows (% of GDP) - China-->
+                <iframe id="iframe_div2_3"
+                    src="https://data.worldbank.org/share/widget?indicators=BX.KLT.DINV.WD.GD.ZS&locations=CN"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
 
 
-                    <!--Manufacturing, value added (% of GDP) - United States-->
-                    <iframe id="iframe_div5_1" src="https://data.worldbank.org/share/widget?indicators=NV.IND.MANF.ZS&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Foreign direct investment, net outflows (% of GDP) - United States-->
+                <iframe id="iframe_div3_1"
+                    src="https://data.worldbank.org/share/widget?indicators=BM.KLT.DINV.WD.GD.ZS&locations=US"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Manufacturing, value added (% of GDP) - India-->
-                    <iframe id="iframe_div5_2" src="https://data.worldbank.org/share/widget?indicators=NV.IND.MANF.ZS&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Foreign direct investment, net outflows (% of GDP) - India-->
+                <iframe id="iframe_div3_2"
+                    src="https://data.worldbank.org/share/widget?indicators=BM.KLT.DINV.WD.GD.ZS&locations=IN"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Manufacturing, value added (% of GDP) - China-->
-                    <iframe id="iframe_div5_3" src="https://data.worldbank.org/share/widget?indicators=NV.IND.MANF.ZS&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-
-
-                    <!--Fertilizer consumption (kilograms per hectare of arable land) - United States-->
-                    <iframe id="iframe_div6_1" src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.ZS&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-                    <!--Fertilizer consumption (kilograms per hectare of arable land) - India-->
-                    <iframe id="iframe_div6_2" src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.ZS&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-                    <!--Fertilizer consumption (kilograms per hectare of arable land) - China-->
-                    <iframe id="iframe_div6_3" src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.ZS&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Foreign direct investment, net outflows (% of GDP) - China-->
+                <iframe id="iframe_div3_3"
+                    src="https://data.worldbank.org/share/widget?indicators=BM.KLT.DINV.WD.GD.ZS&locations=CN"
+                    width='800' height='533' frameBorder='0' scrolling="no"></iframe>
 
 
 
-                    <!--Fertilizer consumption (% of fertilizer production) - United States-->
-                    <iframe id="iframe_div7_1" src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.PT.ZS&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Agricultural-->
+                <!--Agriculture, forestry, and fishing, value added (% of GDP) - United States-->
+                <iframe id="iframe_div4_1"
+                    src="https://data.worldbank.org/share/widget?indicators=NV.AGR.TOTL.ZS&locations=US" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Fertilizer consumption (% of fertilizer production) - India-->
-                    <iframe id="iframe_div7_2" src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.PT.ZS&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Agriculture, forestry, and fishing, value added (% of GDP) - India-->
+                <iframe id="iframe_div4_2"
+                    src="https://data.worldbank.org/share/widget?indicators=NV.AGR.TOTL.ZS&locations=IN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Fertilizer consumption (% of fertilizer production) - China-->
-                    <iframe id="iframe_div7_3" src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.PT.ZS&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-
-
-
-                    <!--Debt-->
-                    <!--Total reserves (includes gold, current US$) - United States-->
-                    <iframe id="iframe_div8_1" src="https://data.worldbank.org/share/widget?indicators=FI.RES.TOTL.CD&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-                    
-                    <!--Total reserves (includes gold, current US$) - India-->
-                    <iframe id="iframe_div8_2" src="https://data.worldbank.org/share/widget?indicators=FI.RES.TOTL.CD&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
-                    
-                    <!--Total reserves (includes gold, current US$) - China-->
-                    <iframe id="iframe_div8_3" src="https://data.worldbank.org/share/widget?indicators=FI.RES.TOTL.CD&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Agriculture, forestry, and fishing, value added (% of GDP) - China-->
+                <iframe id="iframe_div4_3"
+                    src="https://data.worldbank.org/share/widget?indicators=NV.AGR.TOTL.ZS&locations=CN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
 
 
-                    <!--GNI (current US$) - United States-->
-                    <iframe id="iframe_div9_1" src="https://data.worldbank.org/share/widget?indicators=NY.GNP.MKTP.CD&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Manufacturing, value added (% of GDP) - United States-->
+                <iframe id="iframe_div5_1"
+                    src="https://data.worldbank.org/share/widget?indicators=NV.IND.MANF.ZS&locations=US" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--GNI (current US$) - India-->
-                    <iframe id="iframe_div9_2" src="https://data.worldbank.org/share/widget?indicators=NY.GNP.MKTP.CD&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Manufacturing, value added (% of GDP) - India-->
+                <iframe id="iframe_div5_2"
+                    src="https://data.worldbank.org/share/widget?indicators=NV.IND.MANF.ZS&locations=IN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--GNI (current US$) - China-->
-                    <iframe id="iframe_div9_3" src="https://data.worldbank.org/share/widget?indicators=NY.GNP.MKTP.CD&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Manufacturing, value added (% of GDP) - China-->
+                <iframe id="iframe_div5_3"
+                    src="https://data.worldbank.org/share/widget?indicators=NV.IND.MANF.ZS&locations=CN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
 
 
-                    <!--Total debt service (% of GNI) - Low & middle income-->
-                    <iframe id="iframe_div10_1" src="https://data.worldbank.org/share/widget?indicators=DT.TDS.DECT.GN.ZS&locations=US" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Fertilizer consumption (kilograms per hectare of arable land) - United States-->
+                <iframe id="iframe_div6_1"
+                    src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.ZS&locations=US" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Total debt service (% of GNI) - India-->
-                    <iframe id="iframe_div10_2" src="https://data.worldbank.org/share/widget?indicators=DT.TDS.DECT.GN.ZS&locations=IN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Fertilizer consumption (kilograms per hectare of arable land) - India-->
+                <iframe id="iframe_div6_2"
+                    src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.ZS&locations=IN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
 
-                    <!--Total debt service (% of GNI) - China-->
-                    <iframe id="iframe_div10_3" src="https://data.worldbank.org/share/widget?indicators=DT.TDS.DECT.GN.ZS&locations=CN" width='800' height='533' frameBorder='0' scrolling="no" ></iframe>
+                <!--Fertilizer consumption (kilograms per hectare of arable land) - China-->
+                <iframe id="iframe_div6_3"
+                    src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.ZS&locations=CN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+
+
+                <!--Fertilizer consumption (% of fertilizer production) - United States-->
+                <iframe id="iframe_div7_1"
+                    src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.PT.ZS&locations=US" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--Fertilizer consumption (% of fertilizer production) - India-->
+                <iframe id="iframe_div7_2"
+                    src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.PT.ZS&locations=IN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--Fertilizer consumption (% of fertilizer production) - China-->
+                <iframe id="iframe_div7_3"
+                    src="https://data.worldbank.org/share/widget?indicators=AG.CON.FERT.PT.ZS&locations=CN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+
+
+                <!--Debt-->
+                <!--Total reserves (includes gold, current US$) - United States-->
+                <iframe id="iframe_div8_1"
+                    src="https://data.worldbank.org/share/widget?indicators=FI.RES.TOTL.CD&locations=US" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--Total reserves (includes gold, current US$) - India-->
+                <iframe id="iframe_div8_2"
+                    src="https://data.worldbank.org/share/widget?indicators=FI.RES.TOTL.CD&locations=IN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--Total reserves (includes gold, current US$) - China-->
+                <iframe id="iframe_div8_3"
+                    src="https://data.worldbank.org/share/widget?indicators=FI.RES.TOTL.CD&locations=CN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+
+
+                <!--GNI (current US$) - United States-->
+                <iframe id="iframe_div9_1"
+                    src="https://data.worldbank.org/share/widget?indicators=NY.GNP.MKTP.CD&locations=US" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--GNI (current US$) - India-->
+                <iframe id="iframe_div9_2"
+                    src="https://data.worldbank.org/share/widget?indicators=NY.GNP.MKTP.CD&locations=IN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--GNI (current US$) - China-->
+                <iframe id="iframe_div9_3"
+                    src="https://data.worldbank.org/share/widget?indicators=NY.GNP.MKTP.CD&locations=CN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+
+
+                <!--Total debt service (% of GNI) - Low & middle income-->
+                <iframe id="iframe_div10_1"
+                    src="https://data.worldbank.org/share/widget?indicators=DT.TDS.DECT.GN.ZS&locations=US" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--Total debt service (% of GNI) - India-->
+                <iframe id="iframe_div10_2"
+                    src="https://data.worldbank.org/share/widget?indicators=DT.TDS.DECT.GN.ZS&locations=IN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+                <!--Total debt service (% of GNI) - China-->
+                <iframe id="iframe_div10_3"
+                    src="https://data.worldbank.org/share/widget?indicators=DT.TDS.DECT.GN.ZS&locations=CN" width='800'
+                    height='533' frameBorder='0' scrolling="no"></iframe>
+
+
+
+                
+                <div id="SA_Wheat_Chart" style="width: 1000px; height: 2000px" draggable="true" ondragstart="drag(event)"></div>
+                <div id="EG_Wheat_Chart" style="width: 1000px; height: 2000px" draggable="true" ondragstart="drag(event)"></div>
+                <div id="SA_Wheat_Pie_Chart" style="width: 900px; height: 500px;" draggable="true" ondragstart="drag(event)"></div>
+                <div id="EG_Wheat_Pie_Chart" style="width: 900px; height: 500px;" draggable="true" ondragstart="drag(event)"></div>
+
 
             </main>
         </div>
     </div>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current');   // Don't need to specify chart libraries!
-      google.charts.setOnLoadCallback(MACROECONOMICS_USA_GDP);
-      google.charts.setOnLoadCallback(MACROECONOMICS_CHINA_GDP);
+        google.charts.load('current');   // Don't need to specify chart libraries!
 
 
-      function MACROECONOMICS_USA_GDP() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'LineChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/17Tksueu5H8BtQPXG9l0mtVgQrJG-4I0-hJvGgmLAAhw/gviz/tq?',
-          query: "SELECT A, D",
-          options: {'title': 'USA GDP', 'width':1000, 'height':500},
-          containerId: 'MACROECONOMICS_USA_GDP_div'
-        });
-        wrapper.draw()
-      }
+        google.charts.load("current", { packages: ["sankey"] });
 
-      function MACROECONOMICS_CHINA_GDP() {
-        var wrapper = new google.visualization.ChartWrapper({
-          chartType: 'LineChart',
-          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/17Tksueu5H8BtQPXG9l0mtVgQrJG-4I0-hJvGgmLAAhw/gviz/tq?',
-          query: "SELECT A, C",
-          options: {'title': 'CHINA GDP', 'width':1200, 'height':400},
-          containerId: 'MACROECONOMICS_CHINA_GDP_div'
-        });
-        wrapper.draw()
-      }
+        google.charts.setOnLoadCallback(draw_SA_Wheat_Chart);
+        function draw_SA_Wheat_Chart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'From');
+            data.addColumn('string', 'To');
+            data.addColumn('number', 'Value');
+            data.addRows([
+                    ['Saudi Arabia Wheat Imports','Argentina',60200],
+                    ['Saudi Arabia Wheat Imports','Australia',5032],
+                    ['Saudi Arabia Wheat Imports','Australia',20],
+                    ['Saudi Arabia Wheat Imports','Australia',1],
+                    ['Saudi Arabia Wheat Imports','Australia',58765],
+                    ['Saudi Arabia Wheat Imports','Australia',0],
+                    ['Saudi Arabia Wheat Imports','Australia',1005],
+                    ['Saudi Arabia Wheat Imports','Australia',0],
+                    ['Saudi Arabia Wheat Imports','Bahrain',554],
+                    ['Saudi Arabia Wheat Imports','Bahrain',3],
+                    ['Saudi Arabia Wheat Imports','Bahrain',2749],
+                    ['Saudi Arabia Wheat Imports','Bahrain',91],
+                    ['Saudi Arabia Wheat Imports','Bahrain',7],
+                    ['Saudi Arabia Wheat Imports','Bahrain',806],
+                    ['Saudi Arabia Wheat Imports','Bahrain',0],
+                    ['Saudi Arabia Wheat Imports','Belgium',0],
+                    ['Saudi Arabia Wheat Imports','Belgium',0],
+                    ['Saudi Arabia Wheat Imports','Czechia',19249],
+                    ['Saudi Arabia Wheat Imports','Democratic Peoples Republic of Korea',0],
+                    ['Saudi Arabia Wheat Imports','Denmark',22],
+                    ['Saudi Arabia Wheat Imports','Egypt',0],
+                    ['Saudi Arabia Wheat Imports','Egypt',0],
+                    ['Saudi Arabia Wheat Imports','Egypt',0],
+                    ['Saudi Arabia Wheat Imports','Egypt',1],
+                    ['Saudi Arabia Wheat Imports','Egypt',0],
+                    ['Saudi Arabia Wheat Imports','Egypt',0],
+                    ['Saudi Arabia Wheat Imports','Egypt',0],
+                    ['Saudi Arabia Wheat Imports','Estonia',28250],
+                    ['Saudi Arabia Wheat Imports','Estonia',0],
+                    ['Saudi Arabia Wheat Imports','Estonia',0],
+                    ['Saudi Arabia Wheat Imports','Ethiopia',0],
+                    ['Saudi Arabia Wheat Imports','Ethiopia',0],
+                    ['Saudi Arabia Wheat Imports','Finland',57750],
+                    ['Saudi Arabia Wheat Imports','Finland',56345],
+                    ['Saudi Arabia Wheat Imports','France',1],
+                    ['Saudi Arabia Wheat Imports','France',1],
+                    ['Saudi Arabia Wheat Imports','France',0],
+                    ['Saudi Arabia Wheat Imports','France',0],
+                    ['Saudi Arabia Wheat Imports','France',0],
+                    ['Saudi Arabia Wheat Imports','France',46],
+                    ['Saudi Arabia Wheat Imports','France',11],
+                    ['Saudi Arabia Wheat Imports','Germany',0],
+                    ['Saudi Arabia Wheat Imports','India',0],
+                    ['Saudi Arabia Wheat Imports','India',3],
+                    ['Saudi Arabia Wheat Imports','India',1],
+                    ['Saudi Arabia Wheat Imports','India',3],
+                    ['Saudi Arabia Wheat Imports','India',5],
+                    ['Saudi Arabia Wheat Imports','India',7],
+                    ['Saudi Arabia Wheat Imports','India',57822],
+                    ['Saudi Arabia Wheat Imports','India',113],
+                    ['Saudi Arabia Wheat Imports','India',0],
+                    ['Saudi Arabia Wheat Imports','India',0],
+                    ['Saudi Arabia Wheat Imports','Iran (Islamic Republic of)',4],
+                    ['Saudi Arabia Wheat Imports','Iran (Islamic Republic of)',1],
+                    ['Saudi Arabia Wheat Imports','Iraq',285],
+                    ['Saudi Arabia Wheat Imports','Iraq',383],
+                    ['Saudi Arabia Wheat Imports','Italy',0],
+                    ['Saudi Arabia Wheat Imports','Italy',0],
+                    ['Saudi Arabia Wheat Imports','Italy',0],
+                    ['Saudi Arabia Wheat Imports','Italy',0],
+                    ['Saudi Arabia Wheat Imports','Italy',6],
+                    ['Saudi Arabia Wheat Imports','Italy',37],
+                    ['Saudi Arabia Wheat Imports','Japan',1],
+                    ['Saudi Arabia Wheat Imports','Jordan',1],
+                    ['Saudi Arabia Wheat Imports','Jordan',0],
+                    ['Saudi Arabia Wheat Imports','Jordan',0],
+                    ['Saudi Arabia Wheat Imports','Kazakhstan',55185],
+                    ['Saudi Arabia Wheat Imports','Kuwait',0],
+                    ['Saudi Arabia Wheat Imports','Kuwait',1],
+                    ['Saudi Arabia Wheat Imports','Kuwait',0],
+                    ['Saudi Arabia Wheat Imports','Kuwait',100],
+                    ['Saudi Arabia Wheat Imports','Kuwait',25],
+                    ['Saudi Arabia Wheat Imports','Kuwait',0],
+                    ['Saudi Arabia Wheat Imports','Kuwait',0],
+                    ['Saudi Arabia Wheat Imports','Latvia',57965],
+                    ['Saudi Arabia Wheat Imports','Latvia',92318],
+                    ['Saudi Arabia Wheat Imports','Latvia',70100],
+                    ['Saudi Arabia Wheat Imports','Lebanon',2],
+                    ['Saudi Arabia Wheat Imports','Lebanon',1],
+                    ['Saudi Arabia Wheat Imports','Malaysia',0],
+                    ['Saudi Arabia Wheat Imports','Maldives',0],
+                    ['Saudi Arabia Wheat Imports','Maldives',248],
+                    ['Saudi Arabia Wheat Imports','Netherlands',0],
+                    ['Saudi Arabia Wheat Imports','Netherlands',0],
+                    ['Saudi Arabia Wheat Imports','Netherlands',1],
+                    ['Saudi Arabia Wheat Imports','Netherlands',0],
+                    ['Saudi Arabia Wheat Imports','Netherlands',2],
+                    ['Saudi Arabia Wheat Imports','Netherlands',0],
+                    ['Saudi Arabia Wheat Imports','Netherlands',55667],
+                    ['Saudi Arabia Wheat Imports','Netherlands',88826],
+                    ['Saudi Arabia Wheat Imports','Oman',300],
+                    ['Saudi Arabia Wheat Imports','Oman',0],
+                    ['Saudi Arabia Wheat Imports','Poland',10000],
+                    ['Saudi Arabia Wheat Imports','Poland',55186],
+                    ['Saudi Arabia Wheat Imports','Qatar',23],
+                    ['Saudi Arabia Wheat Imports','Romania',49518],
+                    ['Saudi Arabia Wheat Imports','Romania',57800],
+                    ['Saudi Arabia Wheat Imports','Romania',116],
+                    ['Saudi Arabia Wheat Imports','Russian Federation',1],
+                    ['Saudi Arabia Wheat Imports','Russian Federation',92763],
+                    ['Saudi Arabia Wheat Imports','Russian Federation',32713],
+                    ['Saudi Arabia Wheat Imports','Russian Federation',50],
+                    ['Saudi Arabia Wheat Imports','Russian Federation',61700],
+                    ['Saudi Arabia Wheat Imports','Slovakia',989],
+                    ['Saudi Arabia Wheat Imports','Slovakia',19249],
+                    ['Saudi Arabia Wheat Imports','Slovakia',1425],
+                    ['Saudi Arabia Wheat Imports','Slovakia',6076],
+                    ['Saudi Arabia Wheat Imports','South Africa',0],
+                    ['Saudi Arabia Wheat Imports','Sudan (former)',1],
+                    ['Saudi Arabia Wheat Imports','Sweden',0],
+                    ['Saudi Arabia Wheat Imports','Sweden',16577],
+                    ['Saudi Arabia Wheat Imports','Syrian Arab Republic',3],
+                    ['Saudi Arabia Wheat Imports','Syrian Arab Republic',0],
+                    ['Saudi Arabia Wheat Imports','Syrian Arab Republic',0],
+                    ['Saudi Arabia Wheat Imports','Turkey',534],
+                    ['Saudi Arabia Wheat Imports','Turkey',1194],
+                    ['Saudi Arabia Wheat Imports','Turkey',0],
+                    ['Saudi Arabia Wheat Imports','Turkey',33],
+                    ['Saudi Arabia Wheat Imports','Turkey',108],
+                    ['Saudi Arabia Wheat Imports','Turkey',147],
+                    ['Saudi Arabia Wheat Imports','Turkey',48],
+                    ['Saudi Arabia Wheat Imports','Turkey',274],
+                    ['Saudi Arabia Wheat Imports','Turkey',321],
+                    ['Saudi Arabia Wheat Imports','Turkey',194],
+                    ['Saudi Arabia Wheat Imports','Turkey',442],
+                    ['Saudi Arabia Wheat Imports','Turkey',158],
+                    ['Saudi Arabia Wheat Imports','Turkey',0],
+                    ['Saudi Arabia Wheat Imports','Ukraine',51300],
+                    ['Saudi Arabia Wheat Imports','Ukraine',60000],
+                    ['Saudi Arabia Wheat Imports','Ukraine',0],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',24],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',0],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',0],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',434],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',372],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',172],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',139],
+                    ['Saudi Arabia Wheat Imports','United Arab Emirates',1965],
+                    ['Saudi Arabia Wheat Imports','United Kingdom of Great Britain and Northern Ireland',2],
+                    ['Saudi Arabia Wheat Imports','United Kingdom of Great Britain and Northern Ireland',27],
+                    ['Saudi Arabia Wheat Imports','United Kingdom of Great Britain and Northern Ireland',0],
+                    ['Saudi Arabia Wheat Imports','United Kingdom of Great Britain and Northern Ireland',0],
+                    ['Saudi Arabia Wheat Imports','United States of America',508],
+                    ['Saudi Arabia Wheat Imports','United States of America',0],
+                    ['Saudi Arabia Wheat Imports','United States of America',26],
+                    ['Saudi Arabia Wheat Imports','United States of America',5],
+                    ['Saudi Arabia Wheat Imports','United States of America',2],
+                    ['Saudi Arabia Wheat Imports','United States of America',84],
+                    ['Saudi Arabia Wheat Imports','United States of America',0],
+                    ['Saudi Arabia Wheat Imports','Yemen',22],
+                    ['Saudi Arabia Wheat Imports','Yemen',786],
+                    ['Saudi Arabia Wheat Imports','Yemen',553],
+                    ['Saudi Arabia Wheat Imports','Yemen',948],
+                    ['Saudi Arabia Wheat Imports','Yemen',304],
+                    ['Saudi Arabia Wheat Imports','Yemen',92],
+                    ['Saudi Arabia Wheat Imports','Yemen',30]
+            ]);
+
+            // Set chart options
+            var options = {
+                width:1000,
+                height:2000,
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.Sankey(document.getElementById('SA_Wheat_Chart'));
+            chart.draw(data, options);
+        }
+
+        google.charts.setOnLoadCallback(draw_EG_Wheat_Chart);
+        function draw_EG_Wheat_Chart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'From');
+            data.addColumn('string', 'To');
+            data.addColumn('number', 'Value');
+            data.addRows([
+                        ['Egypt Wheat Imports','Algeria',935],
+                        ['Egypt Wheat Imports','Algeria',10600],
+                        ['Egypt Wheat Imports','Algeria',35144],
+                        ['Egypt Wheat Imports','Argentina',24809],
+                        ['Egypt Wheat Imports','Argentina',283091],
+                        ['Egypt Wheat Imports','Argentina',25447],
+                        ['Egypt Wheat Imports','Argentina',147610],
+                        ['Egypt Wheat Imports','Argentina',4575],
+                        ['Egypt Wheat Imports','Argentina',51850],
+                        ['Egypt Wheat Imports','Argentina',2000],
+                        ['Egypt Wheat Imports','Argentina',12450],
+                        ['Egypt Wheat Imports','Argentina',73095],
+                        ['Egypt Wheat Imports','Argentina',13400],
+                        ['Egypt Wheat Imports','Argentina',374933],
+                        ['Egypt Wheat Imports','Argentina',12344],
+                        ['Egypt Wheat Imports','Argentina',189000],
+                        ['Egypt Wheat Imports','Australia',755395],
+                        ['Egypt Wheat Imports','Australia',202026],
+                        ['Egypt Wheat Imports','Australia',264309],
+                        ['Egypt Wheat Imports','Australia',32724],
+                        ['Egypt Wheat Imports','Australia',203640],
+                        ['Egypt Wheat Imports','Austria',3550],
+                        ['Egypt Wheat Imports','Azerbaijan',5000],
+                        ['Egypt Wheat Imports','Bangladesh',4104],
+                        ['Egypt Wheat Imports','Belarus',426214],
+                        ['Egypt Wheat Imports','Belarus',4343],
+                        ['Egypt Wheat Imports','Belarus',0],
+                        ['Egypt Wheat Imports','Belarus',0],
+                        ['Egypt Wheat Imports','Belarus',48973],
+                        ['Egypt Wheat Imports','Belarus',67604],
+                        ['Egypt Wheat Imports','Belarus',57750],
+                        ['Egypt Wheat Imports','Belgium',0],
+                        ['Egypt Wheat Imports','Belgium-Luxembourg',47226],
+                        ['Egypt Wheat Imports','Belgium-Luxembourg',576],
+                        ['Egypt Wheat Imports','Brazil',5000],
+                        ['Egypt Wheat Imports','Brazil',30807],
+                        ['Egypt Wheat Imports','Brazil',3462],
+                        ['Egypt Wheat Imports','Brazil',120758],
+                        ['Egypt Wheat Imports','Brazil',31000],
+                        ['Egypt Wheat Imports','Brazil',11297],
+                        ['Egypt Wheat Imports','Brazil',76443],
+                        ['Egypt Wheat Imports','Brazil',145],
+                        ['Egypt Wheat Imports','Brazil',0],
+                        ['Egypt Wheat Imports','Brazil',5],
+                        ['Egypt Wheat Imports','Bulgaria',5428],
+                        ['Egypt Wheat Imports','Bulgaria',53148],
+                        ['Egypt Wheat Imports','Bulgaria',8437],
+                        ['Egypt Wheat Imports','Bulgaria',31053],
+                        ['Egypt Wheat Imports','Bulgaria',87269],
+                        ['Egypt Wheat Imports','Bulgaria',57741],
+                        ['Egypt Wheat Imports','Bulgaria',14],
+                        ['Egypt Wheat Imports','Bulgaria',46593],
+                        ['Egypt Wheat Imports','Canada',231500],
+                        ['Egypt Wheat Imports','Canada',206222],
+                        ['Egypt Wheat Imports','Canada',74940],
+                        ['Egypt Wheat Imports','Canada',25800],
+                        ['Egypt Wheat Imports','Canada',26400],
+                        ['Egypt Wheat Imports','Canada',60025],
+                        ['Egypt Wheat Imports','Canada',39912],
+                        ['Egypt Wheat Imports','Canada',123129],
+                        ['Egypt Wheat Imports','Canada',15514],
+                        ['Egypt Wheat Imports','Canada',50821],
+                        ['Egypt Wheat Imports','Canada',271573],
+                        ['Egypt Wheat Imports','Canada',3025],
+                        ['Egypt Wheat Imports','Canada',21],
+                        ['Egypt Wheat Imports','Canada',21999],
+                        ['Egypt Wheat Imports','Canada',40434],
+                        ['Egypt Wheat Imports','Canada',9184],
+                        ['Egypt Wheat Imports','Canada',34901],
+                        ['Egypt Wheat Imports','Canada',64],
+                        ['Egypt Wheat Imports','Canada',8391],
+                        ['Egypt Wheat Imports','China, mainland',25363],
+                        ['Egypt Wheat Imports','China, mainland',2000],
+                        ['Egypt Wheat Imports','China, mainland',8330],
+                        ['Egypt Wheat Imports','China, Taiwan Province of',555],
+                        ['Egypt Wheat Imports','Croatia',4246],
+                        ['Egypt Wheat Imports','Croatia',2920],
+                        ['Egypt Wheat Imports','Croatia',15155],
+                        ['Egypt Wheat Imports','Croatia',6746],
+                        ['Egypt Wheat Imports','Croatia',12705],
+                        ['Egypt Wheat Imports','Croatia',74045],
+                        ['Egypt Wheat Imports','Cyprus',3000],
+                        ['Egypt Wheat Imports','Cyprus',17900],
+                        ['Egypt Wheat Imports','Cyprus',5000],
+                        ['Egypt Wheat Imports','Czechia',32597],
+                        ['Egypt Wheat Imports','Czechia',11000],
+                        ['Egypt Wheat Imports','Czechia',25349],
+                        ['Egypt Wheat Imports','Denmark',1000],
+                        ['Egypt Wheat Imports','Dominica',3147],
+                        ['Egypt Wheat Imports','Ecuador',17520],
+                        ['Egypt Wheat Imports','Estonia',4188],
+                        ['Egypt Wheat Imports','Finland',0],
+                        ['Egypt Wheat Imports','Finland',0],
+                        ['Egypt Wheat Imports','France',188602],
+                        ['Egypt Wheat Imports','France',365911],
+                        ['Egypt Wheat Imports','France',1562924],
+                        ['Egypt Wheat Imports','France',633277],
+                        ['Egypt Wheat Imports','France',217145],
+                        ['Egypt Wheat Imports','France',67],
+                        ['Egypt Wheat Imports','France',625830],
+                        ['Egypt Wheat Imports','France',593422],
+                        ['Egypt Wheat Imports','Germany',869],
+                        ['Egypt Wheat Imports','Germany',300],
+                        ['Egypt Wheat Imports','Germany',92147],
+                        ['Egypt Wheat Imports','Germany',28044],
+                        ['Egypt Wheat Imports','Germany',76308],
+                        ['Egypt Wheat Imports','Germany',35076],
+                        ['Egypt Wheat Imports','Germany',48886],
+                        ['Egypt Wheat Imports','Germany',42381],
+                        ['Egypt Wheat Imports','Germany',4],
+                        ['Egypt Wheat Imports','Germany',59],
+                        ['Egypt Wheat Imports','Germany',51335],
+                        ['Egypt Wheat Imports','Germany',0],
+                        ['Egypt Wheat Imports','Germany',79820],
+                        ['Egypt Wheat Imports','Germany',55],
+                        ['Egypt Wheat Imports','Hungary',492],
+                        ['Egypt Wheat Imports','Hungary',52555],
+                        ['Egypt Wheat Imports','Hungary',4865],
+                        ['Egypt Wheat Imports','Hungary',4529],
+                        ['Egypt Wheat Imports','Hungary',5852],
+                        ['Egypt Wheat Imports','Hungary',0],
+                        ['Egypt Wheat Imports','Hungary',19171],
+                        ['Egypt Wheat Imports','India',27500],
+                        ['Egypt Wheat Imports','India',50419],
+                        ['Egypt Wheat Imports','India',30],
+                        ['Egypt Wheat Imports','India',2000],
+                        ['Egypt Wheat Imports','Indonesia',63000],
+                        ['Egypt Wheat Imports','Indonesia',1000],
+                        ['Egypt Wheat Imports','Indonesia',2254],
+                        ['Egypt Wheat Imports','Indonesia',2352],
+                        ['Egypt Wheat Imports','Iraq',5000],
+                        ['Egypt Wheat Imports','Ireland',63000],
+                        ['Egypt Wheat Imports','Italy',7136],
+                        ['Egypt Wheat Imports','Italy',13657],
+                        ['Egypt Wheat Imports','Italy',13670],
+                        ['Egypt Wheat Imports','Italy',1],
+                        ['Egypt Wheat Imports','Italy',0],
+                        ['Egypt Wheat Imports','Italy',0],
+                        ['Egypt Wheat Imports','Jordan',1125],
+                        ['Egypt Wheat Imports','Jordan',21000],
+                        ['Egypt Wheat Imports','Jordan',64596],
+                        ['Egypt Wheat Imports','Jordan',27512],
+                        ['Egypt Wheat Imports','Kazakhstan',10584],
+                        ['Egypt Wheat Imports','Kazakhstan',5250],
+                        ['Egypt Wheat Imports','Kazakhstan',2232],
+                        ['Egypt Wheat Imports','Kazakhstan',3001],
+                        ['Egypt Wheat Imports','Kazakhstan',12019],
+                        ['Egypt Wheat Imports','Kazakhstan',339911],
+                        ['Egypt Wheat Imports','Kazakhstan',7],
+                        ['Egypt Wheat Imports','Kazakhstan',6195],
+                        ['Egypt Wheat Imports','Kyrgyzstan',2007],
+                        ['Egypt Wheat Imports','Latvia',3891],
+                        ['Egypt Wheat Imports','Latvia',27485],
+                        ['Egypt Wheat Imports','Latvia',0],
+                        ['Egypt Wheat Imports','Latvia',28903],
+                        ['Egypt Wheat Imports','Lebanon',23078],
+                        ['Egypt Wheat Imports','Lebanon',25000],
+                        ['Egypt Wheat Imports','Libya',20],
+                        ['Egypt Wheat Imports','Lithuania',4270],
+                        ['Egypt Wheat Imports','Lithuania',19219],
+                        ['Egypt Wheat Imports','Lithuania',15474],
+                        ['Egypt Wheat Imports','Lithuania',213810],
+                        ['Egypt Wheat Imports','Lithuania',5000],
+                        ['Egypt Wheat Imports','Lithuania',6127],
+                        ['Egypt Wheat Imports','Lithuania',38029],
+                        ['Egypt Wheat Imports','Lithuania',23518],
+                        ['Egypt Wheat Imports','Malaysia',60000],
+                        ['Egypt Wheat Imports','Malaysia',2077],
+                        ['Egypt Wheat Imports','Maldives',0],
+                        ['Egypt Wheat Imports','Mexico',9486],
+                        ['Egypt Wheat Imports','Mexico',10000],
+                        ['Egypt Wheat Imports','Mexico',6500],
+                        ['Egypt Wheat Imports','Mexico',2637],
+                        ['Egypt Wheat Imports','Mexico',0],
+                        ['Egypt Wheat Imports','Mexico',0],
+                        ['Egypt Wheat Imports','Netherlands',1],
+                        ['Egypt Wheat Imports','Netherlands',254],
+                        ['Egypt Wheat Imports','Netherlands',5638],
+                        ['Egypt Wheat Imports','Netherlands',1],
+                        ['Egypt Wheat Imports','New Zealand',6262],
+                        ['Egypt Wheat Imports','New Zealand',1000],
+                        ['Egypt Wheat Imports','New Zealand',63000],
+                        ['Egypt Wheat Imports','North Macedonia',4000],
+                        ['Egypt Wheat Imports','Norway',2997],
+                        ['Egypt Wheat Imports','Oman',9043],
+                        ['Egypt Wheat Imports','Pakistan',15000],
+                        ['Egypt Wheat Imports','Pakistan',15737],
+                        ['Egypt Wheat Imports','Pakistan',25240],
+                        ['Egypt Wheat Imports','Pakistan',45000],
+                        ['Egypt Wheat Imports','Peru',5000],
+                        ['Egypt Wheat Imports','Poland',57500],
+                        ['Egypt Wheat Imports','Poland',18185],
+                        ['Egypt Wheat Imports','Poland',31850],
+                        ['Egypt Wheat Imports','Poland',164844],
+                        ['Egypt Wheat Imports','Poland',20014],
+                        ['Egypt Wheat Imports','Poland',87300],
+                        ['Egypt Wheat Imports','Poland',651899],
+                        ['Egypt Wheat Imports','Poland',412349],
+                        ['Egypt Wheat Imports','Poland',282701],
+                        ['Egypt Wheat Imports','Poland',138721],
+                        ['Egypt Wheat Imports','Poland',128333],
+                        ['Egypt Wheat Imports','Portugal',2000],
+                        ['Egypt Wheat Imports','Republic of Korea',8540],
+                        ['Egypt Wheat Imports','Republic of Korea',170945],
+                        ['Egypt Wheat Imports','Republic of Moldova',2500],
+                        ['Egypt Wheat Imports','Republic of Moldova',2396],
+                        ['Egypt Wheat Imports','Republic of Moldova',3294],
+                        ['Egypt Wheat Imports','Republic of Moldova',44656],
+                        ['Egypt Wheat Imports','Republic of Moldova',7274],
+                        ['Egypt Wheat Imports','Republic of Moldova',0],
+                        ['Egypt Wheat Imports','Republic of Moldova',9],
+                        ['Egypt Wheat Imports','Romania',2929],
+                        ['Egypt Wheat Imports','Romania',7870],
+                        ['Egypt Wheat Imports','Romania',4250],
+                        ['Egypt Wheat Imports','Romania',13124],
+                        ['Egypt Wheat Imports','Romania',2154],
+                        ['Egypt Wheat Imports','Romania',50888],
+                        ['Egypt Wheat Imports','Romania',1102094],
+                        ['Egypt Wheat Imports','Romania',1104706],
+                        ['Egypt Wheat Imports','Romania',1286086],
+                        ['Egypt Wheat Imports','Romania',294522],
+                        ['Egypt Wheat Imports','Russian Federation',19734],
+                        ['Egypt Wheat Imports','Russian Federation',1104198],
+                        ['Egypt Wheat Imports','Russian Federation',870193],
+                        ['Egypt Wheat Imports','Russian Federation',504297],
+                        ['Egypt Wheat Imports','Russian Federation',2307969],
+                        ['Egypt Wheat Imports','Russian Federation',1885156],
+                        ['Egypt Wheat Imports','Russian Federation',2501390],
+                        ['Egypt Wheat Imports','Russian Federation',1599119],
+                        ['Egypt Wheat Imports','Russian Federation',5460508],
+                        ['Egypt Wheat Imports','Saudi Arabia',74243],
+                        ['Egypt Wheat Imports','Saudi Arabia',34704],
+                        ['Egypt Wheat Imports','Saudi Arabia',237531],
+                        ['Egypt Wheat Imports','Saudi Arabia',55659],
+                        ['Egypt Wheat Imports','Saudi Arabia',0],
+                        ['Egypt Wheat Imports','Slovakia',12332],
+                        ['Egypt Wheat Imports','Slovenia',17872],
+                        ['Egypt Wheat Imports','Slovenia',139244],
+                        ['Egypt Wheat Imports','Slovenia',3560],
+                        ['Egypt Wheat Imports','Slovenia',2200],
+                        ['Egypt Wheat Imports','Slovenia',46076],
+                        ['Egypt Wheat Imports','Slovenia',30137],
+                        ['Egypt Wheat Imports','Slovenia',29252],
+                        ['Egypt Wheat Imports','Somalia',1000],
+                        ['Egypt Wheat Imports','South Africa',4863],
+                        ['Egypt Wheat Imports','Spain',57600],
+                        ['Egypt Wheat Imports','Spain',11560],
+                        ['Egypt Wheat Imports','Spain',3410],
+                        ['Egypt Wheat Imports','Spain',5049],
+                        ['Egypt Wheat Imports','Spain',0],
+                        ['Egypt Wheat Imports','Sri Lanka',4000],
+                        ['Egypt Wheat Imports','Sri Lanka',3012],
+                        ['Egypt Wheat Imports','Sweden',27009],
+                        ['Egypt Wheat Imports','Sweden',24711],
+                        ['Egypt Wheat Imports','Sweden',17000],
+                        ['Egypt Wheat Imports','Sweden',2000],
+                        ['Egypt Wheat Imports','Switzerland',3465],
+                        ['Egypt Wheat Imports','Syrian Arab Republic',0],
+                        ['Egypt Wheat Imports','Syrian Arab Republic',105],
+                        ['Egypt Wheat Imports','Syrian Arab Republic',144455],
+                        ['Egypt Wheat Imports','Syrian Arab Republic',229128],
+                        ['Egypt Wheat Imports','Syrian Arab Republic',2],
+                        ['Egypt Wheat Imports','Thailand',5270],
+                        ['Egypt Wheat Imports','Thailand',13700],
+                        ['Egypt Wheat Imports','Thailand',39715],
+                        ['Egypt Wheat Imports','Thailand',3000],
+                        ['Egypt Wheat Imports','Thailand',1],
+                        ['Egypt Wheat Imports','Turkey',12600],
+                        ['Egypt Wheat Imports','Turkey',172877],
+                        ['Egypt Wheat Imports','Turkey',123638],
+                        ['Egypt Wheat Imports','Turkey',326833],
+                        ['Egypt Wheat Imports','Turkey',2000],
+                        ['Egypt Wheat Imports','Turkey',92925],
+                        ['Egypt Wheat Imports','Turkey',4020],
+                        ['Egypt Wheat Imports','Turkey',0],
+                        ['Egypt Wheat Imports','Ukraine',10091],
+                        ['Egypt Wheat Imports','Ukraine',390419],
+                        ['Egypt Wheat Imports','Ukraine',69625],
+                        ['Egypt Wheat Imports','Ukraine',28700],
+                        ['Egypt Wheat Imports','Ukraine',89616],
+                        ['Egypt Wheat Imports','Ukraine',330105],
+                        ['Egypt Wheat Imports','Ukraine',204600],
+                        ['Egypt Wheat Imports','Ukraine',99209],
+                        ['Egypt Wheat Imports','Ukraine',390818],
+                        ['Egypt Wheat Imports','Ukraine',1767563],
+                        ['Egypt Wheat Imports','Ukraine',2317534],
+                        ['Egypt Wheat Imports','United Arab Emirates',2000],
+                        ['Egypt Wheat Imports','United Kingdom of Great Britain and Northern Ireland',36483],
+                        ['Egypt Wheat Imports','United Kingdom of Great Britain and Northern Ireland',85000],
+                        ['Egypt Wheat Imports','United Kingdom of Great Britain and Northern Ireland',4000],
+                        ['Egypt Wheat Imports','United Kingdom of Great Britain and Northern Ireland',12838],
+                        ['Egypt Wheat Imports','United Kingdom of Great Britain and Northern Ireland',80],
+                        ['Egypt Wheat Imports','United Kingdom of Great Britain and Northern Ireland',1475],
+                        ['Egypt Wheat Imports','United Kingdom of Great Britain and Northern Ireland',2],
+                        ['Egypt Wheat Imports','United States of America',1293909],
+                        ['Egypt Wheat Imports','United States of America',2308777],
+                        ['Egypt Wheat Imports','United States of America',1797682],
+                        ['Egypt Wheat Imports','United States of America',1488056],
+                        ['Egypt Wheat Imports','United States of America',1761711],
+                        ['Egypt Wheat Imports','United States of America',943978],
+                        ['Egypt Wheat Imports','United States of America',859863],
+                        ['Egypt Wheat Imports','United States of America',444159],
+                        ['Egypt Wheat Imports','United States of America',91094],
+                        ['Egypt Wheat Imports','United States of America',82270],
+                        ['Egypt Wheat Imports','United States of America',75282],
+                        ['Egypt Wheat Imports','Uruguay',8750],
+                        ['Egypt Wheat Imports','Uruguay',72633],
+                        ['Egypt Wheat Imports','Uruguay',39],
+                        ['Egypt Wheat Imports','Yemen',10000],
+                        ['Egypt Wheat Imports','Yugoslav SFR',25778]
+            ]);
+
+            // Set chart options
+            var options = {
+                width:1000,
+                height:2000,
+            };
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.Sankey(document.getElementById('EG_Wheat_Chart'));
+            chart.draw(data, options);
+        }
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(draw_SA_Wheat_Pie_Chart);
+
+        function draw_SA_Wheat_Pie_Chart() {
+            var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Wheat per Ton'],
+                    ['Argentina',173250],
+                    ['Argentina',60200],
+                    ['Australia',5032],
+                    ['Australia',20],
+                    ['Australia',1],
+                    ['Australia',58765],
+                    ['Australia',57750],
+                    ['Australia',341522],
+                    ['Australia',408755],
+                    ['Australia',300648],
+                    ['Australia',0],
+                    ['Australia',1005],
+                    ['Australia',0],
+                    ['Bahrain',554],
+                    ['Bahrain',3],
+                    ['Bahrain',2749],
+                    ['Bahrain',91],
+                    ['Bahrain',7],
+                    ['Bahrain',806],
+                    ['Bahrain',0],
+                    ['Belgium',0],
+                    ['Belgium',0],
+                    ['Brazil',114428],
+                    ['Brazil',60250],
+                    ['Brazil',120303],
+                    ['Brazil',61791],
+                    ['Brazil',62430],
+                    ['Brazil',62460],
+                    ['Bulgaria',9362],
+                    ['Canada',0],
+                    ['Canada',0],
+                    ['Canada',1027080],
+                    ['Canada',450234],
+                    ['Canada',508816],
+                    ['Canada',575076],
+                    ['Canada',120751],
+                    ['Canada',630145],
+                    ['Canada',121228],
+                    ['Canada',68250],
+                    ['Canada',66000],
+                    ['China, mainland',2],
+                    ['Czechia',25890],
+                    ['Czechia',68612],
+                    ['Czechia',19249],
+                    ['Czechia',5872],
+                    ['Czechia',37997],
+                    ['Czechia',97158],
+                    ['Czechia',118896],
+                    ['Democratic Peoples Republic of Korea',0],
+                    ['Denmark',22],
+                    ['Egypt',0],
+                    ['Egypt',0],
+                    ['Egypt',0],
+                    ['Egypt',1],
+                    ['Egypt',0],
+                    ['Egypt',0],
+                    ['Egypt',0],
+                    ['Estonia',28250],
+                    ['Estonia',0],
+                    ['Estonia',0],
+                    ['Ethiopia',0],
+                    ['Ethiopia',0],
+                    ['Finland',57750],
+                    ['Finland',56345],
+                    ['France',1],
+                    ['France',1],
+                    ['France',0],
+                    ['France',0],
+                    ['France',120751],
+                    ['France',174877],
+                    ['France',0],
+                    ['France',46],
+                    ['France',191477],
+                    ['France',11],
+                    ['France',0],
+                    ['Germany',18910],
+                    ['Germany',493164],
+                    ['Germany',244399],
+                    ['Germany',347599],
+                    ['Germany',606364],
+                    ['Germany',733037],
+                    ['Germany',615624],
+                    ['Germany',642972],
+                    ['Germany',1266693],
+                    ['Germany',257434],
+                    ['Germany',139850],
+                    ['Germany',0],
+                    ['India',0],
+                    ['India',3],
+                    ['India',1],
+                    ['India',3],
+                    ['India',5],
+                    ['India',7],
+                    ['India',57822],
+                    ['India',113],
+                    ['India',0],
+                    ['India',0],
+                    ['Iran (Islamic Republic of)',4],
+                    ['Iran (Islamic Republic of)',1],
+                    ['Iraq',285],
+                    ['Iraq',383],
+                    ['Italy',0],
+                    ['Italy',0],
+                    ['Italy',0],
+                    ['Italy',0],
+                    ['Italy',6],
+                    ['Italy',37],
+                    ['Japan',1],
+                    ['Jordan',1],
+                    ['Jordan',0],
+                    ['Jordan',0],
+                    ['Kazakhstan',55185],
+                    ['Kuwait',0],
+                    ['Kuwait',1],
+                    ['Kuwait',0],
+                    ['Kuwait',100],
+                    ['Kuwait',25],
+                    ['Kuwait',0],
+                    ['Kuwait',0],
+                    ['Latvia',115785],
+                    ['Latvia',57965],
+                    ['Latvia',92318],
+                    ['Latvia',91547],
+                    ['Latvia',303168],
+                    ['Latvia',273504],
+                    ['Latvia',129703],
+                    ['Latvia',70100],
+                    ['Lebanon',2],
+                    ['Lebanon',1],
+                    ['Lebanon',0],
+                    ['Lebanon',200],
+                    ['Lebanon',175],
+                    ['Lebanon',0],
+                    ['Lebanon',0],
+                    ['Lebanon',2],
+                    ['Lithuania',66500],
+                    ['Lithuania',269197],
+                    ['Lithuania',43220],
+                    ['Lithuania',309864],
+                    ['Lithuania',338991],
+                    ['Lithuania',252027],
+                    ['Lithuania',176468],
+                    ['Lithuania',509799],
+                    ['Lithuania',451067],
+                    ['Lithuania',260521],
+                    ['Lithuania',259583],
+                    ['Lithuania',130500],
+                    ['Malaysia',0],
+                    ['Maldives',0],
+                    ['Maldives',248],
+                    ['Netherlands',0],
+                    ['Netherlands',0],
+                    ['Netherlands',1],
+                    ['Netherlands',0],
+                    ['Netherlands',2],
+                    ['Netherlands',0],
+                    ['Netherlands',55667],
+                    ['Netherlands',88826],
+                    ['Oman',300],
+                    ['Oman',0],
+                    ['Poland',10000],
+                    ['Poland',55186],
+                    ['Poland',125972],
+                    ['Poland',188088],
+                    ['Poland',943888],
+                    ['Poland',310400],
+                    ['Poland',842654],
+                    ['Poland',486570],
+                    ['Poland',64090],
+                    ['Poland',66149],
+                    ['Poland',448613],
+                    ['Qatar',23],
+                    ['Romania',49518],
+                    ['Romania',57800],
+                    ['Romania',116],
+                    ['Russian Federation',1],
+                    ['Russian Federation',92763],
+                    ['Russian Federation',32713],
+                    ['Russian Federation',50],
+                    ['Russian Federation',61700],
+                    ['Slovakia',989],
+                    ['Slovakia',19249],
+                    ['Slovakia',1425],
+                    ['Slovakia',6076],
+                    ['South Africa',0],
+                    ['Sudan (former)',1],
+                    ['Sweden',0],
+                    ['Sweden',16577],
+                    ['Syrian Arab Republic',3],
+                    ['Syrian Arab Republic',0],
+                    ['Syrian Arab Republic',0],
+                    ['Turkey',534],
+                    ['Turkey',1194],
+                    ['Turkey',0],
+                    ['Turkey',33],
+                    ['Turkey',108],
+                    ['Turkey',147],
+                    ['Turkey',48],
+                    ['Turkey',274],
+                    ['Turkey',321],
+                    ['Turkey',194],
+                    ['Turkey',442],
+                    ['Turkey',158],
+                    ['Turkey',0],
+                    ['Ukraine',263466],
+                    ['Ukraine',51300],
+                    ['Ukraine',60000],
+                    ['Ukraine',0],
+                    ['United Arab Emirates',24],
+                    ['United Arab Emirates',0],
+                    ['United Arab Emirates',0],
+                    ['United Arab Emirates',434],
+                    ['United Arab Emirates',372],
+                    ['United Arab Emirates',172],
+                    ['United Arab Emirates',139],
+                    ['United Arab Emirates',1965],
+                    ['United Kingdom of Great Britain and Northern Ireland',2],
+                    ['United Kingdom of Great Britain and Northern Ireland',27],
+                    ['United Kingdom of Great Britain and Northern Ireland',0],
+                    ['United Kingdom of Great Britain and Northern Ireland',0],
+                    ['United States of America',74193],
+                    ['United States of America',118258],
+                    ['United States of America',147157],
+                    ['United States of America',129735],
+                    ['United States of America',508],
+                    ['United States of America',0],
+                    ['United States of America',26],
+                    ['United States of America',5],
+                    ['United States of America',2],
+                    ['United States of America',0],
+                    ['United States of America',162342],
+                    ['United States of America',494638],
+                    ['United States of America',170244],
+                    ['United States of America',57846],
+                    ['United States of America',68605],
+                    ['United States of America',56879],
+                    ['United States of America',84],
+                    ['United States of America',0],
+                    ['Yemen',22],
+                    ['Yemen',26],
+                    ['Yemen',927],
+                    ['Yemen',1727],
+                    ['Yemen',828],
+                    ['Yemen',1695],
+                    ['Yemen',1674],
+                    ['Yemen',1830],
+                    ['Yemen',1766],
+                    ['Yemen',644],
+                    ['Yemen',380],
+                    ['Yemen',786],
+                    ['Yemen',553],
+                    ['Yemen',948],
+                    ['Yemen',304],
+                    ['Yemen',92],
+                    ['Yemen',30]
+            ]);
+
+            var options = {
+            title: 'Saudi Arabi Wheat Import Quantity (Tonnes)',
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('SA_Wheat_Pie_Chart'));
+
+            chart.draw(data, options);
+        }
+
+        google.charts.setOnLoadCallback(draw_EG_Wheat_Pie_Chart);
+        function draw_EG_Wheat_Pie_Chart() {
+            var data = google.visualization.arrayToDataTable([
+                    ['Country', 'Wheat per Ton'],
+                    ['Algeria',935],
+                    ['Algeria',10600],
+                    ['Algeria',35144],
+                    ['Argentina',24809],
+                    ['Argentina',283091],
+                    ['Argentina',25447],
+                    ['Argentina',147610],
+                    ['Argentina',4575],
+                    ['Argentina',51850],
+                    ['Argentina',2000],
+                    ['Argentina',123512],
+                    ['Argentina',703000],
+                    ['Argentina',12450],
+                    ['Argentina',73095],
+                    ['Argentina',13400],
+                    ['Argentina',374933],
+                    ['Argentina',12344],
+                    ['Argentina',189000],
+                    ['Argentina',121989],
+                    ['Australia',1805812],
+                    ['Australia',1405498],
+                    ['Australia',1591093],
+                    ['Australia',658692],
+                    ['Australia',1805459],
+                    ['Australia',1912096],
+                    ['Australia',1242054],
+                    ['Australia',755395],
+                    ['Australia',1827624],
+                    ['Australia',711660],
+                    ['Australia',625667],
+                    ['Australia',525043],
+                    ['Australia',775559],
+                    ['Australia',741843],
+                    ['Australia',930245],
+                    ['Australia',350102],
+                    ['Australia',1029617],
+                    ['Australia',685375],
+                    ['Australia',965554],
+                    ['Australia',288582],
+                    ['Australia',182181],
+                    ['Australia',947185],
+                    ['Australia',72961],
+                    ['Australia',276184],
+                    ['Australia',472182],
+                    ['Australia',171548],
+                    ['Australia',202026],
+                    ['Australia',264309],
+                    ['Australia',32724],
+                    ['Australia',203640],
+                    ['Austria',3550],
+                    ['Azerbaijan',5000],
+                    ['Bangladesh',4104],
+                    ['Belarus',426214],
+                    ['Belarus',4343],
+                    ['Belarus',0],
+                    ['Belarus',0],
+                    ['Belarus',48973],
+                    ['Belarus',67604],
+                    ['Belarus',57750],
+                    ['Belgium',0],
+                    ['Belgium-Luxembourg',47226],
+                    ['Belgium-Luxembourg',576],
+                    ['Brazil',5000],
+                    ['Brazil',30807],
+                    ['Brazil',3462],
+                    ['Brazil',120758],
+                    ['Brazil',31000],
+                    ['Brazil',11297],
+                    ['Brazil',76443],
+                    ['Brazil',145],
+                    ['Brazil',0],
+                    ['Brazil',5],
+                    ['Bulgaria',5428],
+                    ['Bulgaria',53148],
+                    ['Bulgaria',8437],
+                    ['Bulgaria',31053],
+                    ['Bulgaria',2000],
+                    ['Bulgaria',1288],
+                    ['Bulgaria',11043],
+                    ['Bulgaria',33000],
+                    ['Bulgaria',53103],
+                    ['Bulgaria',36201],
+                    ['Bulgaria',87269],
+                    ['Bulgaria',57741],
+                    ['Bulgaria',14],
+                    ['Bulgaria',46593],
+                    ['Canada',231500],
+                    ['Canada',206222],
+                    ['Canada',74940],
+                    ['Canada',25800],
+                    ['Canada',26400],
+                    ['Canada',60025],
+                    ['Canada',39912],
+                    ['Canada',123129],
+                    ['Canada',15514],
+                    ['Canada',50821],
+                    ['Canada',271573],
+                    ['Canada',3025],
+                    ['Canada',2000],
+                    ['Canada',5999],
+                    ['Canada',226780],
+                    ['Canada',73000],
+                    ['Canada',48765],
+                    ['Canada',250645],
+                    ['Canada',21],
+                    ['Canada',21999],
+                    ['Canada',40434],
+                    ['Canada',9184],
+                    ['Canada',34901],
+                    ['Canada',64],
+                    ['Canada',8391],
+                    ['China, mainland',25363],
+                    ['China, mainland',2000],
+                    ['China, mainland',8330],
+                    ['China, Taiwan Province of',555],
+                    ['Croatia',4246],
+                    ['Croatia',2920],
+                    ['Croatia',15155],
+                    ['Croatia',6746],
+                    ['Croatia',12705],
+                    ['Croatia',74045],
+                    ['Cyprus',3000],
+                    ['Cyprus',17900],
+                    ['Cyprus',5000],
+                    ['Czechia',32597],
+                    ['Czechia',11000],
+                    ['Czechia',25349],
+                    ['Czechia',321752],
+                    ['Czechia',3354],
+                    ['Denmark',43750],
+                    ['Denmark',25000],
+                    ['Denmark',30000],
+                    ['Denmark',1000],
+                    ['Dominica',3147],
+                    ['Ecuador',17520],
+                    ['Estonia',4188],
+                    ['Finland',0],
+                    ['Finland',0],
+                    ['France',188602],
+                    ['France',365911],
+                    ['France',241809],
+                    ['France',910665],
+                    ['France',177499],
+                    ['France',288198],
+                    ['France',44042],
+                    ['France',281823],
+                    ['France',15085],
+                    ['France',900051],
+                    ['France',141940],
+                    ['France',210590],
+                    ['France',433034],
+                    ['France',863976],
+                    ['France',873366],
+                    ['France',477103],
+                    ['France',559805],
+                    ['France',517999],
+                    ['France',120341],
+                    ['France',890907],
+                    ['France',1023039],
+                    ['France',74565],
+                    ['France',1298531],
+                    ['France',1562924],
+                    ['France',633277],
+                    ['France',217145],
+                    ['France',67],
+                    ['France',625830],
+                    ['France',593422],
+                    ['Germany',869],
+                    ['Germany',300],
+                    ['Germany',92147],
+                    ['Germany',28044],
+                    ['Germany',76308],
+                    ['Germany',35076],
+                    ['Germany',48886],
+                    ['Germany',42381],
+                    ['Germany',4],
+                    ['Germany',59],
+                    ['Germany',51335],
+                    ['Germany',0],
+                    ['Germany',79820],
+                    ['Germany',55],
+                    ['Hungary',492],
+                    ['Hungary',52555],
+                    ['Hungary',4865],
+                    ['Hungary',4529],
+                    ['Hungary',5852],
+                    ['Hungary',0],
+                    ['Hungary',19171],
+                    ['India',27500],
+                    ['India',50419],
+                    ['India',30],
+                    ['India',2000],
+                    ['Indonesia',63000],
+                    ['Indonesia',1000],
+                    ['Indonesia',2254],
+                    ['Indonesia',2352],
+                    ['Iraq',5000],
+                    ['Ireland',63000],
+                    ['Italy',7136],
+                    ['Italy',13657],
+                    ['Italy',13670],
+                    ['Italy',1],
+                    ['Italy',0],
+                    ['Italy',0],
+                    ['Jordan',1125],
+                    ['Jordan',21000],
+                    ['Jordan',64596],
+                    ['Jordan',27512],
+                    ['Kazakhstan',10584],
+                    ['Kazakhstan',5250],
+                    ['Kazakhstan',2232],
+                    ['Kazakhstan',3001],
+                    ['Kazakhstan',12019],
+                    ['Kazakhstan',339911],
+                    ['Kazakhstan',7],
+                    ['Kazakhstan',6195],
+                    ['Kyrgyzstan',2007],
+                    ['Latvia',3891],
+                    ['Latvia',27485],
+                    ['Latvia',0],
+                    ['Latvia',28903],
+                    ['Lebanon',23078],
+                    ['Lebanon',25000],
+                    ['Libya',20],
+                    ['Lithuania',4270],
+                    ['Lithuania',19219],
+                    ['Lithuania',15474],
+                    ['Lithuania',213810],
+                    ['Lithuania',5000],
+                    ['Lithuania',6127],
+                    ['Lithuania',38029],
+                    ['Lithuania',23518],
+                    ['Malaysia',60000],
+                    ['Malaysia',2077],
+                    ['Maldives',0],
+                    ['Mexico',9486],
+                    ['Mexico',10000],
+                    ['Mexico',6500],
+                    ['Mexico',2637],
+                    ['Mexico',0],
+                    ['Mexico',0],
+                    ['Netherlands',1],
+                    ['Netherlands',254],
+                    ['Netherlands',5638],
+                    ['Netherlands',1],
+                    ['New Zealand',6262],
+                    ['New Zealand',1000],
+                    ['New Zealand',63000],
+                    ['North Macedonia',4000],
+                    ['Norway',2997],
+                    ['Oman',9043],
+                    ['Pakistan',15000],
+                    ['Pakistan',15737],
+                    ['Pakistan',25240],
+                    ['Pakistan',45000],
+                    ['Peru',5000],
+                    ['Poland',57500],
+                    ['Poland',18185],
+                    ['Poland',31850],
+                    ['Poland',164844],
+                    ['Poland',20014],
+                    ['Poland',87300],
+                    ['Poland',651899],
+                    ['Poland',412349],
+                    ['Poland',282701],
+                    ['Poland',138721],
+                    ['Poland',128333],
+                    ['Portugal',2000],
+                    ['Republic of Korea',8540],
+                    ['Republic of Korea',170945],
+                    ['Republic of Moldova',2500],
+                    ['Republic of Moldova',2396],
+                    ['Republic of Moldova',3294],
+                    ['Republic of Moldova',44656],
+                    ['Republic of Moldova',7274],
+                    ['Republic of Moldova',0],
+                    ['Republic of Moldova',9],
+                    ['Romania',2929],
+                    ['Romania',7870],
+                    ['Romania',4250],
+                    ['Romania',13124],
+                    ['Romania',2154],
+                    ['Romania',50888],
+                    ['Romania',29500],
+                    ['Romania',165635],
+                    ['Romania',1803935],
+                    ['Romania',1809852],
+                    ['Romania',1159582],
+                    ['Romania',1297052],
+                    ['Romania',1102094],
+                    ['Romania',1104706],
+                    ['Romania',1286086],
+                    ['Romania',294522],
+                    ['Russian Federation',19734],
+                    ['Russian Federation',1104198],
+                    ['Russian Federation',870193],
+                    ['Russian Federation',504297],
+                    ['Russian Federation',2307969],
+                    ['Russian Federation',1885156],
+                    ['Russian Federation',2501390],
+                    ['Russian Federation',1599119],
+                    ['Russian Federation',3777012],
+                    ['Russian Federation',1687295],
+                    ['Russian Federation',4057024],
+                    ['Russian Federation',4533808],
+                    ['Russian Federation',5823786],
+                    ['Russian Federation',7831131],
+                    ['Russian Federation',9198030],
+                    ['Russian Federation',5743949],
+                    ['Russian Federation',5460508],
+                    ['Saudi Arabia',74243],
+                    ['Saudi Arabia',34704],
+                    ['Saudi Arabia',237531],
+                    ['Saudi Arabia',55659],
+                    ['Saudi Arabia',0],
+                    ['Slovakia',12332],
+                    ['Slovenia',17872],
+                    ['Slovenia',139244],
+                    ['Slovenia',3560],
+                    ['Slovenia',2200],
+                    ['Slovenia',46076],
+                    ['Slovenia',30137],
+                    ['Slovenia',29252],
+                    ['Somalia',1000],
+                    ['South Africa',4863],
+                    ['Spain',57600],
+                    ['Spain',11560],
+                    ['Spain',3410],
+                    ['Spain',5049],
+                    ['Spain',0],
+                    ['Sri Lanka',4000],
+                    ['Sri Lanka',3012],
+                    ['Sweden',27009],
+                    ['Sweden',24711],
+                    ['Sweden',17000],
+                    ['Sweden',2000],
+                    ['Switzerland',3465],
+                    ['Syrian Arab Republic',0],
+                    ['Syrian Arab Republic',105],
+                    ['Syrian Arab Republic',144455],
+                    ['Syrian Arab Republic',188576],
+                    ['Syrian Arab Republic',157700],
+                    ['Syrian Arab Republic',399558],
+                    ['Syrian Arab Republic',229128],
+                    ['Syrian Arab Republic',2],
+                    ['Thailand',5270],
+                    ['Thailand',13700],
+                    ['Thailand',39715],
+                    ['Thailand',3000],
+                    ['Thailand',1],
+                    ['Turkey',12600],
+                    ['Turkey',172877],
+                    ['Turkey',123638],
+                    ['Turkey',326833],
+                    ['Turkey',2000],
+                    ['Turkey',92925],
+                    ['Turkey',4020],
+                    ['Turkey',0],
+                    ['Ukraine',10091],
+                    ['Ukraine',390419],
+                    ['Ukraine',69625],
+                    ['Ukraine',28700],
+                    ['Ukraine',89616],
+                    ['Ukraine',330105],
+                    ['Ukraine',204600],
+                    ['Ukraine',99209],
+                    ['Ukraine',390818],
+                    ['Ukraine',6463404],
+                    ['Ukraine',2843061],
+                    ['Ukraine',1803065],
+                    ['Ukraine',2407006],
+                    ['Ukraine',2558049],
+                    ['Ukraine',1600458],
+                    ['Ukraine',1767563],
+                    ['Ukraine',2317534],
+                    ['United Arab Emirates',2000],
+                    ['United Kingdom of Great Britain and Northern Ireland',36483],
+                    ['United Kingdom of Great Britain and Northern Ireland',85000],
+                    ['United Kingdom of Great Britain and Northern Ireland',4000],
+                    ['United Kingdom of Great Britain and Northern Ireland',12838],
+                    ['United Kingdom of Great Britain and Northern Ireland',80],
+                    ['United Kingdom of Great Britain and Northern Ireland',1475],
+                    ['United Kingdom of Great Britain and Northern Ireland',2],
+                    ['United States of America',1293909],
+                    ['United States of America',1543622],
+                    ['United States of America',2083432],
+                    ['United States of America',1269639],
+                    ['United States of America',1736254],
+                    ['United States of America',3552272],
+                    ['United States of America',4660222],
+                    ['United States of America',4731655],
+                    ['United States of America',4245145],
+                    ['United States of America',3621859],
+                    ['United States of America',4495122],
+                    ['United States of America',3522764],
+                    ['United States of America',2308777],
+                    ['United States of America',1797682],
+                    ['United States of America',1488056],
+                    ['United States of America',1761711],
+                    ['United States of America',943978],
+                    ['United States of America',859863],
+                    ['United States of America',1601394],
+                    ['United States of America',444159],
+                    ['United States of America',2771233],
+                    ['United States of America',91094],
+                    ['United States of America',432086],
+                    ['United States of America',354424],
+                    ['United States of America',82270],
+                    ['United States of America',263433],
+                    ['United States of America',782095],
+                    ['United States of America',75282],
+                    ['Uruguay',8750],
+                    ['Uruguay',72633],
+                    ['Uruguay',39],
+                    ['Yemen',10000],
+                    ['Yugoslav SFR',25778]
+            ]);
+
+            var options = {
+            title: 'Egypt Wheat Import Quantity (Tonnes)',
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('EG_Wheat_Pie_Chart'));
+
+            chart.draw(data, options);
+        }
+
     </script>
 
     <script>
@@ -746,26 +2473,34 @@ table,
             //let newElem = document.getElementById('MACROECONOMICS_USA_GDP_div').cloneNode(false);
             let newElem;
 
-            if(cloneId === "gdp") {
-              newElem = document.getElementById('iframe_div1_1').cloneNode(false);
-            } else if(cloneId === "fdi_in") {
-              newElem = document.getElementById('iframe_div2_1').cloneNode(false);
-            } else if(cloneId === "fdi_out") {
-              newElem = document.getElementById('iframe_div3_1').cloneNode(false);
-            } else if(cloneId === "agri_gdp") {
-              newElem = document.getElementById('iframe_div4_1').cloneNode(false);
-            } else if(cloneId === "credit") {
-              newElem = document.getElementById('iframe_div5_1').cloneNode(false);
-            } else if(cloneId === "fert") {
-              newElem = document.getElementById('iframe_div6_1').cloneNode(false);
-            } else if(cloneId === "fert_prod") {
-              newElem = document.getElementById('iframe_div7_1').cloneNode(false);
-            } else if(cloneId === "reserves") {
-              newElem = document.getElementById('iframe_div8_1').cloneNode(false);
-            } else if(cloneId === "gni") {
-              newElem = document.getElementById('iframe_div9_1').cloneNode(false);
-            } else if(cloneId === "total_debt") {
-              newElem = document.getElementById('iframe_div10_1').cloneNode(false);
+            if (cloneId === "gdp") {
+                newElem = document.getElementById('iframe_div1_1').cloneNode(false);
+            } else if (cloneId === "fdi_in") {
+                newElem = document.getElementById('iframe_div2_1').cloneNode(false);
+            } else if (cloneId === "fdi_out") {
+                newElem = document.getElementById('iframe_div3_1').cloneNode(false);
+            } else if (cloneId === "agri_gdp") {
+                newElem = document.getElementById('iframe_div4_1').cloneNode(false);
+            } else if (cloneId === "credit") {
+                newElem = document.getElementById('iframe_div5_1').cloneNode(false);
+            } else if (cloneId === "fert") {
+                newElem = document.getElementById('iframe_div6_1').cloneNode(false);
+            } else if (cloneId === "fert_prod") {
+                newElem = document.getElementById('iframe_div7_1').cloneNode(false);
+            } else if (cloneId === "reserves") {
+                newElem = document.getElementById('iframe_div8_1').cloneNode(false);
+            } else if (cloneId === "gni") {
+                newElem = document.getElementById('iframe_div9_1').cloneNode(false);
+            } else if (cloneId === "total_debt") {
+                newElem = document.getElementById('iframe_div10_1').cloneNode(false);
+            } else if (cloneId === "EG_Imports_Sankey") {
+                newElem = document.getElementById('EG_Wheat_Chart').cloneNode(false);
+            } else if (cloneId === "EG_Imports_Pie") {
+                newElem = document.getElementById('EG_Wheat_Pie_Chart').cloneNode(false);
+            } else if (cloneId === "SA_Imports_Sankey") {
+                newElem = document.getElementById('SA_Wheat_Chart').cloneNode(false);
+            } else if (cloneId === "SA_Imports_Pie") {
+                newElem = document.getElementById('SA_Wheat_Pie_Chart').cloneNode(false);
             } else {
 
             }
