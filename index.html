@@ -260,6 +260,27 @@ table,
                 font-size: 3.5rem;
             }
         }
+
+        #test_div {
+            width: 300px;
+            height: 100px;
+            position: relative;/*parent must have positioning*/
+        }
+        iframe {
+            border: 0;
+            height: 80px;
+            width: 100%;
+            background: #ddd;
+        }
+        /*Cover up the entire element (could be limited to just covering the iframe element)*/
+        #test_div:after {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
     </style>
 
 
@@ -487,8 +508,11 @@ table,
 
 
                 </div>
-                    <div id="vis_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)"></div>
+                    <!--<div id="MACROECONOMICS_USA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>
+                    <div id="MACROECONOMICS_CHINA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>-->
 
+                    <div id="test_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" >
+                        <iframe src="https://data.worldbank.org/share/widget?contextual=default&end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=US&start=1961&view=chart" width='600' height='400' frameBorder='0' scrolling="no" ></iframe>
                 <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
             </main>
         </div>
@@ -496,16 +520,28 @@ table,
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current');   // Don't need to specify chart libraries!
-      google.charts.setOnLoadCallback(drawVisualization);
+      google.charts.setOnLoadCallback(MACROECONOMICS_USA_GDP);
+      google.charts.setOnLoadCallback(MACROECONOMICS_CHINA_GDP);
 
 
-      function drawVisualization() {
+      function MACROECONOMICS_USA_GDP() {
         var wrapper = new google.visualization.ChartWrapper({
           chartType: 'LineChart',
           dataSourceUrl: 'https://docs.google.com/spreadsheets/d/17Tksueu5H8BtQPXG9l0mtVgQrJG-4I0-hJvGgmLAAhw/gviz/tq?',
           query: "SELECT A, D",
-          options: {'title': 'USA GDP', 'width':500, 'height':500},
-          containerId: 'vis_div'
+          options: {'title': 'USA GDP', 'width':1000, 'height':500},
+          containerId: 'MACROECONOMICS_USA_GDP_div'
+        });
+        wrapper.draw()
+      }
+
+      function MACROECONOMICS_CHINA_GDP() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'LineChart',
+          dataSourceUrl: 'https://docs.google.com/spreadsheets/d/17Tksueu5H8BtQPXG9l0mtVgQrJG-4I0-hJvGgmLAAhw/gviz/tq?',
+          query: "SELECT A, C",
+          options: {'title': 'CHINA GDP', 'width':1200, 'height':400},
+          containerId: 'MACROECONOMICS_CHINA_GDP_div'
         });
         wrapper.draw()
       }
@@ -549,13 +585,20 @@ table,
             console.log(cloneId.split("_")[0]);
 
             // var data = ev.dataTransfer.getData("text");
-            let newElem = document.getElementById('vis_div').cloneNode(false);
+            //let newElem = document.getElementById('MACROECONOMICS_USA_GDP_div').cloneNode(false);
+            let newElem;
+
+            if(cloneId === "gdp") {
+              newElem = document.getElementById('test_div').cloneNode(false);
+            } else if(cloneId === "fdi_in") {
+              newElem = document.getElementById('test_div').cloneNode(false);
+            }
             // if (cloneId.split("_")[0] === 'cloned') {
             //     newElem = document.getElementById(cloneId);
             // } else {
             //     cnt += 1;
             //     if (cloneId === 'gdp') {
-            //         newElem = document.getElementById('vis_div').cloneNode(false)
+            //         newElem = document.getElementById('test_div').cloneNode(false)
             //     } else {
             //         newElem = document.getElementById(cloneId).cloneNode(false);
             //     }
@@ -564,7 +607,10 @@ table,
             // }
 
             ev.target.appendChild(newElem);
-            drawVisualization();
+
+            //MACROECONOMICS_USA_GDP();
+
+            //MACROECONOMICS_CHINA_GDP();
         }
     </script>
 
