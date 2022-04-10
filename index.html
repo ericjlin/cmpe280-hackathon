@@ -262,16 +262,11 @@ table,
         }
 
         #test_div {
-            width: 300px;
-            height: 100px;
+            width: 600px;
+            height: 400px;
             position: relative;/*parent must have positioning*/
         }
-        iframe {
-            border: 0;
-            height: 80px;
-            width: 100%;
-            background: #ddd;
-        }
+
         /*Cover up the entire element (could be limited to just covering the iframe element)*/
         #test_div:after {
             display: block;
@@ -511,8 +506,7 @@ table,
                     <!--<div id="MACROECONOMICS_USA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>
                     <div id="MACROECONOMICS_CHINA_GDP_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" ></div>-->
 
-                    <div id="test_div" style="width: 600px; height: 400px;" draggable="true" ondragstart="drag(event)" >
-                        <iframe src="https://data.worldbank.org/share/widget?contextual=default&end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=US&start=1961&view=chart" width='600' height='400' frameBorder='0' scrolling="no" ></iframe>
+                        <iframe id="test_div" src="https://data.worldbank.org/share/widget?contextual=default&end=2020&indicators=NY.GDP.MKTP.KD.ZG&locations=US&start=1961&view=chart" width='600' height='400' frameBorder='0' scrolling="no" ></iframe>
                 <!-- <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas> -->
             </main>
         </div>
